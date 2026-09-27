@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Khight — готические кольца</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Dark Khight</h1>
+    <p class="tagline">готические кольца ручной работы</p>
+    <button id="cart-btn" class="cart-btn">
+      Корзина (<span id="cart-count">0</span>) — <span id="cart-total">0</span> ₽
+    </button>
+  </header>
+
+  <main>
+    <section class="catalog" aria-label="Каталог товаров">
+      <article class="product-card" data-id="1">
+        <div class="portrait-frame"><img src="кольцо1.png" alt="Сила веры"></div>
+        <h2>Сила веры</h2>
+        <p class="price">4200 ₽</p>
+        <button class="add-to-cart-btn">Добавить в корзину</button>
+      </article>
+
+      <article class="product-card" data-id="2">
+        <div class="portrait-frame"><img src="кольцо2.png" alt="Торжество"></div>
+        <h2>Торжество</h2>
+        <p class="price">3800 ₽</p>
+        <button class="add-to-cart-btn">Добавить в корзину</button>
+      </article>
+
+      <article class="product-card" data-id="3">
+        <div class="portrait-frame"><img src="кольцо3.png" alt="Роза среди навоза"></div>
+        <h2>Роза среди навоза</h2>
+        <p class="price">3500 ₽</p>
+        <button class="add-to-cart-btn">Добавить в корзину</button>
+      </article>
+
+      <article class="product-card" data-id="4">
+        <div class="portrait-frame"><img src="кольцо4.png" alt="Дракон"></div>
+        <h2>Дракон</h2>
+        <p class="price">6000 ₽</p>
+        <button class="add-to-cart-btn">Добавить в корзину</button>
+      </article>
+
+      <article class="product-card" data-id="5">
+        <div class="portrait-frame"><img src="кольцо5.png" alt="Пингвин"></div>
+        <h2>Пингвин</h2>
+        <p class="price">5000 ₽</p>
+        <button class="add-to-cart-btn">Добавить в корзину</button>
+      </article>
+
+      <article class="product-card" data-id="6">
+        <div class="portrait-frame"><img src="кольцо6.png" alt="Гладиатор или рыцарь"></div>
+        <h2>Гладиатор или рыцарь</h2>
+        <p class="price">5500 ₽</p>
+        <button class="add-to-cart-btn">Добавить в корзину</button>
+      </article>
+    </section>
+  </main>
+
+  <!-- Модальное окно корзины -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-cart" class="close-btn">&times;</button>
+      <h2>Корзина</h2>
+      <ul id="cart-items"></ul>
+      <p>Итого: <span id="modal-total">0</span> ₽</p>
+      <button id="checkout-btn">Оформить заказ</button>
+    </div>
+  </div>
+
+  <!-- Модальное окно формы заказа -->
+  <div id="order-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-order" class="close-btn">&times;</button>
+      <h2>Оформление заказа</h2>
+      <form id="order-form">
+        <label for="first-name">Имя</label>
+        <input type="text" id="first-name" required>
+
+        <label for="last-name">Фамилия</label>
+        <input type="text" id="last-name" required>
+
+        <label for="address">Адрес доставки</label>
+        <input type="text" id="address" required>
+
+        <label for="phone">Контактный телефон</label>
+        <input type="tel" id="phone" required>
+
+        <button type="submit">Создать заказ</button>
+      </form>
+      <p id="order-success" class="hidden">Заказ создан!</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; DARK knight</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
